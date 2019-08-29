@@ -1,0 +1,914 @@
+/*Fonts settings*/
+/*Предварительная скачка шрифтов в папку fonts и их подключение*/
+@font-face {
+  font-family: 'ProximaNova_bold';
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova_regular';
+  src: url('../fonts/ProximaNova-Bold.eot');
+  src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.ttf') format('truetype'), url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+/*Создание миксинов - переменные в less для использования в написании стилей на less - в style.cc не отображаются*/
+/*Для гибкости управления цветом в препроцессоре Less есть возможность создавать переменные для кветов*/
+/*Цвет кнопок*/
+/*цвет иконок и аквтиных элементов*/
+/*цвет текста*/
+/*цвет запрета*/
+/*фон серый с узором*/
+/*фон белый*/
+/*Basic settings*/
+html {
+  font-size: 10px;
+  /*Стандартный размер в теле всего контента*/
+}
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+  /*Отключение обводки при фокусировке*/
+}
+a:hover {
+  text-decoration: none;
+  /*Отключение подчеркивания для ссылки*/
+}
+body {
+  font-family: 'ProximaNova_bold';
+  /*Стандартный шрифт-миксин для тела-body*/
+}
+/*ОФормление форм*/
+.form {
+  /*Расположение лєйблов в input*/
+}
+.form-input {
+  border-radius: 75px;
+  display: block;
+  border: 1px solid #dddddd;
+  width: 100%;
+  padding: 1.7rem;
+  margin: 2rem 0;
+  transition: all 0.5s;
+  font-family: 'ProximaNova_regular';
+}
+.form-input:hover {
+  background-color: #006c00;
+  color: #ffffff;
+}
+.form label {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  position: absolute;
+  font-size: 1.3rem;
+  left: 50%;
+  /*Нахождение объекта на расстоянии половины родителя*/
+  transform: translateX(-50%) translateY(-50%);
+  /*Ф-ии движения объектов по осям х,у*/
+}
+.form-btn {
+  display: block;
+  width: 100%;
+  font-family: 'ProximaNova_regular';
+  height: 5.5rem;
+  font-size: 1.6rem;
+}
+.button {
+  padding: 1rem 3rem;
+  border-radius: 90px;
+  font-size: 1.2rem;
+  background-color: #f8af01;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.5s;
+  /*Поведение кнопки при эфекте hover что конкретно будет изменяться и скорость (время изменения)*/
+}
+.button:hover {
+  cursor: pointer;
+  /*При hover мышка меняется на руку*/
+  background-color: #c58b01;
+  /*Ф-я Less для затемнения/осветления при hover-эффекте*/
+}
+/*Typography*/
+section {
+  padding: 4rem 0;
+}
+/*main-header*/
+.main {
+  background: #ffffff url(../img/bgc_1.jpg) center center no-repeat;
+  /*Рисунок на фоне: фон ссылка верт горизонталь без повторений*/
+  background-size: cover;
+  /*Хз*/
+  padding: 3rem 0 5rem;
+}
+.main-content {
+  /*Амперсанд - говорит о том, что идет наследование от класса main.*/
+  margin-top: 14rem;
+}
+.main-content h1 {
+  font-size: 4rem;
+  font-family: 'ProximaNova_regular';
+  margin-top: 0;
+  line-height: 1.45;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+.main-subtitle {
+  margin-bottom: 5rem;
+  font-size: 2.4rem;
+}
+.main span {
+  display: inline-block;
+  padding: 3rem 5rem;
+  background-color: #45b613;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+}
+.main span strong {
+  font-size: 3rem;
+  font-family: 'ProximaNova_regular';
+}
+.main-trigger {
+  display: block;
+  font-size: 2.2rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-family: 'ProximaNova_regular';
+}
+.main-form {
+  display: block;
+  background-color: #ffffff;
+  padding: 4rem 5rem;
+  text-align: center;
+}
+.main-form-header {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+}
+.main-form-header strong {
+  font-size: 2rem;
+}
+.main-form small {
+  display: block;
+  margin-top: 1rem;
+}
+.header {
+  height: 7rem;
+}
+.phone-block {
+  text-align: right;
+}
+.phone-link {
+  display: inline-block;
+  font-family: 'ProximaNova_regular';
+  font-weight: 900;
+  font-size: 2rem;
+  height: 7rem;
+  line-height: 7rem;
+  color: #1a1820;
+}
+.wrap {
+  display: table;
+  /*Отображение объекта в виде таблицы*/
+  width: 100%;
+  height: 7rem;
+}
+.wrap-block {
+  text-align: right;
+  display: table-cell;
+  /*Отображение объекта в ячейки таблицы родителя*/
+  vertical-align: middle;
+  /*Вертикальное выравнивание*/
+}
+/*Блок с преимуществами*/
+.features {
+  background-color: #ffffff;
+}
+.features-blocks {
+  text-align: center;
+}
+.features-blocks h3 {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-family: 'ProximaNova_regular';
+}
+.features-blocks p {
+  text-align: justify;
+  font-size: 1.6rem;
+  font-family: 'ProximaNova_bold';
+  padding: 0 3rem;
+}
+.features-img {
+  text-align: center;
+  height: 6rem;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
+.section-header {
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+.section-header h2 {
+  font-family: 'ProximaNova_regular';
+  font-size: 3.6rem;
+}
+.section-header p {
+  font-size: 1.4rem;
+}
+.section-header_light {
+  margin-top: 0;
+  text-align: center;
+  color: #ffffff;
+}
+.slick-active {
+  outline: none;
+  /*Отключение обводки в слайдере при hover*/
+}
+.prev {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/left_arrow.png) center no-repeat;
+  background-size: 100%;
+  border: none;
+}
+.nextarrow {
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/right_arrow.png) center no-repeat;
+  background-size: 100%;
+  border: none;
+}
+/* Всплывающие окна */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.popup-content {
+  top: 10%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) scale(1.4);
+  padding: 4rem 6rem;
+}
+.popup-form {
+  margin-top: 3rem;
+  padding: 1rem;
+}
+.popup-form h4 {
+  font-weight: 900;
+  font-family: 'ProximaNova_regular';
+}
+.popup-form textarea {
+  border-radius: 30px;
+}
+.popup-close {
+  position: absolute;
+  top: 10%;
+  right: 4.2rem;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+.popup-header {
+  text-align: center;
+}
+/*Верстка секции с ценами*/
+.price {
+  background: #45b613 url(../img/bgc_prices.jpg) center;
+  /*Оформление карточек*/
+}
+.price-header-btn {
+  margin-top: 2rem;
+}
+.price-button {
+  text-align: right;
+}
+.price-block {
+  padding: 1rem 6rem;
+  min-height: 50rem;
+  text-align: center;
+  background-color: #ffffff;
+  color: #1a1820;
+  box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+}
+.price h4 {
+  font-size: 1.4rem;
+  font-family: 'ProximaNova_regular';
+}
+.price img {
+  margin-top: 3rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+.price-list {
+  padding: 0;
+  font-size: 1.6rem;
+  list-style: none;
+  min-height: 12rem;
+  /*Создание блока с наличием рисунка (галочки)*/
+}
+.price-list li:before {
+  /*что имеено будет находиться перед before ссылками*/
+  content: '';
+  display: inline-block;
+  /*определение размеров блока*/
+  width: 2rem;
+  height: 2rem;
+  /*подгрузка рисунка в блок*/
+  background: #ffffff url(../img/checked.png) center center no-repeat;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.price-tag {
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_regular';
+  display: block;
+  margin-bottom: 2rem;
+}
+/*Отзывы*/
+.fiedback {
+  position: relative;
+  background: url(../img/fiedback_bg.png) no-repeat center;
+  background-size: cover;
+  /*оформление формы*/
+}
+.fiedback small {
+  display: none;
+  font-family: 'ProximaNova_bold';
+  font-size: 1rem;
+  padding: 3rem;
+}
+.fiedback-prev-btn {
+  left: -4rem;
+}
+.fiedback-next-btn {
+  right: -4rem;
+}
+.fiedback-text {
+  padding: 1rem;
+  text-align: justify;
+  font-style: italic;
+  border: 2px solid #45b613;
+  margin-top: 2rem;
+  position: relative;
+}
+.fiedback-text::before {
+  left: 4rem;
+  content: '';
+  position: absolute;
+  display: block;
+  top: -2rem;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #45b613;
+  background-color: #ffffff;
+  border-bottom: none;
+  border-top-right-radius: 100px;
+}
+.fiedback-slider {
+  background-color: #ffffff;
+  box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+  padding: 7rem 6rem;
+}
+.fiedback-slider p {
+  font-size: 1.6rem;
+}
+.fiedback-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 5rem;
+  background-color: #45b613;
+  border: none;
+}
+.fiedback-slider-btn img {
+  width: 40%;
+}
+.fiedback-slider .media {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
+.fiedback-form {
+  margin-top: 6rem;
+  padding: 4rem 10rem;
+  text-align: center;
+}
+.fiedback-form h3 {
+  margin-bottom: 1rem;
+  font-family: 'ProximaNova_regular';
+  font-size: 2rem;
+}
+.fiedback-form label {
+  transform: translateX(-50%) translateY(30%);
+}
+.fiedback-btn {
+  max-width: 30rem;
+  margin: auto;
+}
+.hand {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  max-width: 40rem;
+}
+.scheme {
+  background: #ffffff url(../img/scheme/hand_scheme.png) bottom -10rem right -10rem no-repeat;
+  background-size: 60rem;
+}
+.scheme-block {
+  min-height: 30rem;
+}
+.scheme-block h3 {
+  font-size: 2.2rem;
+  font-family: 'ProximaNova_regular';
+}
+.scheme h3 {
+  font-family: 'ProximaNova_regular';
+  margin-bottom: 4rem;
+}
+/*Все на 100% включено*/
+.circle {
+  background-color: #45b613;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.circle-border {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #45b613;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  padding: 0.3rem;
+  color: #ffffff;
+  font-family: 'ProximaNova_regular';
+  font-size: 1.9rem;
+}
+.all-inclusive {
+  background: #ffffff url(../img/100persent_bg.png) center no-repeat;
+  background-size: cover;
+}
+.all-inclusive h2 {
+  margin-top: -5rem;
+  color: #45b613;
+}
+.all-inclusive .media {
+  min-height: 15rem;
+  font-size: 1.2rem;
+}
+.all-inclusive .media h4 {
+  font-family: 'ProximaNova_regular';
+  font-size: 1.6rem;
+}
+/*Развеивание всех опасений*/
+.problems {
+  position: relative;
+  min-height: 80rem;
+}
+.problems-list {
+  border: 5px solid;
+  padding: 2rem;
+  min-height: 38rem;
+}
+.problems-list h4 {
+  font-size: 2.1rem;
+  font-family: 'ProximaNova_regular';
+}
+.problems-list ul {
+  line-height: 2.5rem;
+  list-style: none;
+}
+.problems-list li {
+  padding: 1.5rem 0;
+}
+.problems-list_bad {
+  border-color: #e8e8e8;
+}
+.problems-list_bad h4 {
+  opacity: 0.5;
+}
+.problems-list_bad li:before {
+  /*что имеено будет находиться перед before ссылками*/
+  content: '';
+  display: inline-block;
+  /*определение размеров блока*/
+  width: 2rem;
+  height: 2rem;
+  /*подгрузка рисунка в блок*/
+  background: #ffffff url(../img/problems_bad.png) center center no-repeat;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.problems-list_good {
+  border-color: #45b613;
+}
+.problems-list_good li:before {
+  /*что имеено будет находиться перед before ссылками*/
+  content: '';
+  display: inline-block;
+  /*определение размеров блока*/
+  width: 2rem;
+  height: 2rem;
+  /*подгрузка рисунка в блок*/
+  background: #ffffff url(../img/checked.png) center center no-repeat;
+  vertical-align: middle;
+  transform: translateX(-130%);
+}
+.problems-girl {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-65%) translateY(-80%) scale(1.1);
+}
+/*Блок с материалами*/
+.materials {
+  background: #ffffff url(../img/materials_bg.png) center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.materials h2 {
+  font-family: 'ProximaNova_regular';
+  font-size: 4rem;
+}
+.materials p {
+  font-family: 'ProximaNova_bold';
+  font-size: 2rem;
+}
+.materials-slider {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.materials-slider img {
+  transform: translateX(35%);
+}
+.materials-slider-block a {
+  text-decoration: underline;
+  color: #45b613;
+}
+.materials-bottom {
+  font-size: 2rem;
+  font-family: 'ProximaNova_regular';
+}
+.materials-bottom a {
+  color: #45b613;
+}
+/*Запись на просмотр*/
+.we_working {
+  background: #ffffff url(../img/how_we_work.png) center no-repeat;
+  background-size: cover;
+}
+.we_working h2 {
+  margin-top: 10rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'ProximaNova_regular';
+}
+.we_working p {
+  font-size: 2rem;
+}
+.we_working-form {
+  text-align: center;
+  margin-top: 10rem;
+  background-color: #ffffff;
+  padding: 4rem 4rem;
+  float: right;
+}
+.we_working-form label {
+  transform: translate(-50%, -50%);
+}
+.workout {
+  font-size: 1.8rem !important;
+  text-transform: none !important;
+  font-family: 'ProximaNova_bold' !important;
+  margin-top: 0rem !important ;
+}
+/*Дополнительные услуги*/
+.additional {
+  background: #ffffff url(../img/additional/additional_bg.png) center no-repeat;
+  background-size: cover;
+}
+.additional .section-header {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.additional h2 {
+  color: #ffffff;
+  font-family: 'ProximaNova_regular';
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+}
+.additional p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: 'ProximaNova_bold';
+}
+.additional-block {
+  text-align: center;
+}
+.additional-block img {
+  width: 34rem;
+  height: 23rem;
+}
+.additional-block p {
+  margin: 2rem 0;
+}
+.additional-block button {
+  border-radius: 10px;
+  margin-bottom: 4rem;
+}
+/*Контакты*/
+.kontakts {
+  background: #ffffff url(../img/contakts_bg.png) center no-repeat;
+  background-size: cover;
+}
+.kontakts h2 {
+  font-family: 'ProximaNova_regular';
+  font-size: 5rem;
+}
+.kontakts p {
+  font-size: 2.2rem;
+}
+.kontakts-form {
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 3rem;
+}
+.kontakts-form .kontakts_title {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+.footer {
+  text-align: center;
+}
+.footer p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.footer-logodev p {
+  font-size: 1rem;
+  font-family: 'ProximaNova_regular';
+}
+.footer-logodev img {
+  transform: translateY(-10%) scale(0.7);
+}
+/*Медиа-запросы. Стили и поведение объектов при разных размерах экранов*/
+@media (max-width: 1199px) {
+  .fiedback-form {
+    padding: 3rem 5rem;
+  }
+  .fiedback .fotorama {
+    margin-bottom: 3rem;
+  }
+  .hand {
+    max-width: 30rem;
+    transform: translateX(-10%);
+  }
+  .scheme {
+    background-size: 0.5;
+  }
+  .all-inclusive h2 {
+    margin-top: 0;
+  }
+  .problems-list {
+    min-height: 45rem;
+  }
+  .problems-girl {
+    transform: translateX(-60%) translateY(-80%) scale(0.9);
+  }
+  .additional-block img {
+    width: 95%;
+    height: auto;
+  }
+  .footer p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 991px) {
+  .phone-link {
+    font-size: 2rem;
+  }
+  .main-title {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  .main-title h1 {
+    margin-bottom: 0;
+  }
+  .main-content {
+    margin-top: 1rem;
+  }
+  .price-button {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .price-header-btn {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .price-block {
+    margin-top: 2rem;
+  }
+  .section-header_light {
+    margin-bottom: 0;
+  }
+  .fiedback-form label {
+    transform: translate(-50%, -50%);
+  }
+  .hand {
+    transform: translateX(-25%) scale(0.8);
+  }
+  .scheme {
+    background: none;
+  }
+  .scheme-block {
+    text-align: center;
+  }
+  .problems-list {
+    min-height: 45rem;
+    margin-bottom: 4rem;
+  }
+  .problems-girl {
+    display: none;
+  }
+  .materials-slider img {
+    transform: translateX(20%);
+  }
+  .we_working {
+    text-align: center;
+  }
+  .we_working h2 {
+    margin-top: 2rem;
+  }
+  .we_working-form {
+    margin-top: 8rem;
+    width: 100%;
+  }
+  .we_working-form label {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .we_working-form .workout {
+    font-size: 15rem;
+  }
+  .additional h2 {
+    font-size: 5rem;
+  }
+  .additional p {
+    font-size: 4rem;
+  }
+  .additional-block img {
+    width: 100%;
+    height: auto;
+  }
+  .additional-block button {
+    width: 40%;
+    height: 8rem;
+  }
+  .kontakts {
+    background: #fcfcfc;
+    text-align: center;
+  }
+  .kontakts p {
+    padding: 2.5rem 0;
+  }
+  .kontakts-form {
+    width: 100%;
+  }
+  .kontakts iframe {
+    height: 50rem;
+  }
+  .footer p {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 766px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+  .phone-link {
+    font-size: 1.5rem;
+  }
+  .logo {
+    text-align: center;
+  }
+  .wrap-block {
+    text-align: center;
+  }
+  .main-title h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .main-subtitle {
+    font-size: 1.6rem;
+  }
+  .fiedback-prev-btn {
+    left: 0;
+  }
+  .fiedback-next-btn {
+    right: 0;
+  }
+  .fiedback small {
+    display: block;
+    font-family: 'ProximaNova_bold';
+    font-size: 1rem;
+    padding: 2rem;
+  }
+  .hand {
+    display: none;
+  }
+  .scheme {
+    background: none;
+  }
+  .scheme-block {
+    text-align: center;
+  }
+  .all-inclusive h2 {
+    font-size: 6rem;
+    margin-top: -6rem;
+  }
+  .all-inclusive p {
+    font-size: 3.5rem;
+  }
+  .all-inclusive .media {
+    min-height: 10rem;
+  }
+  .all-inclusive .media h4 {
+    font-size: 3rem;
+    padding: 0 2rem;
+  }
+  .problems-list {
+    min-height: 35rem;
+  }
+  .materials-slider {
+    margin-bottom: 3rem;
+  }
+  .materials-slider img {
+    transform: translateX(60%);
+  }
+  .we_working {
+    text-align: center;
+  }
+  .we_working h2 {
+    margin-top: 2rem;
+  }
+  .we_working-form {
+    margin-top: 0;
+    width: 100%;
+  }
+  .we_working-form label {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .kontakts {
+    background: #fcfcfc;
+  }
+  .kontakts-form {
+    width: 100%;
+  }
+  .kontakts .label_form {
+    transform: translate(-50%, -50%);
+  }
+  .kontakts iframe {
+    height: 30rem;
+  }
+  .footer p {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}

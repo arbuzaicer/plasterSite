@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Test_site</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>  
+<body>
+<!-- Создание первого окна с наличием лого, телефона, названия/описания сайта и контактной формой -->
+  <main class="main">
+    <div class="container"> <!-- Инициализация контейнера bootstrap -->
+
+      <div class="header">  <!-- Инициализация первого ряд, в котором находятся лого, тлф... -->
+      <div class="row"> 
+<!-- Класс bootstrap для логотипа  -->
+       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> <!--Поведение лого при разных экранах -->
+          <div class="logo">
+          <img src="img/logo.png" alt="Name_logo">
+          </div>
+       </div>
+<!-- Класс bootstrap для телефона  -->
+      <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-md-offset-0 col-xs-6"> <!--Поведение тлф при разных экранах -->
+        <div class="phone-block">
+          <a class="phone-link" href="#">+7 495 771 05 08</a>
+        </div>
+      </div>    
+<!-- Класс bootstrap для кнопки  -->
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"> <!--Поведение тлф при разных экранах -->
+        <div class="wrap"> <!--Обертка для центрирования кнопки по вертикали -->
+          <div class="wrap-block">
+            <button class="button header-btn popup-btn">Получить консутльтацию</button>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div> <!--Закрытие первого ряда -->
+    
+<!--Создание ряда с наличием названия, описания и формы -->
+    <div class="main-content">
+      <div class="row">
+<!-- Класс bootstrap для левой части основного контента  -->
+        <div class="col-md-6 col-sm-12 col-xs-12"> 
+          <div class="main-title"> <!-- Название сайта  -->
+            <h1>Автоматизированная штукатурка стен</h1>
+            <p class="main-subtitle">Идеально ровные стены<br>в кратчайшие сроки</p>
+            <span> <!-- Описание сайта  -->
+              Стоимость работ<br>от <strong>300</strong> руб/м<sup>2</sup>
+            </span> <!-- Стоимость работ  -->
+            <strong class="main-trigger">Оплата по факту!</strong>
+          </div>
+        </div>
+<!-- Создание формы оформления звонка  -->
+        <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-12">
+          <div class="main-form">
+            <h2 class="form-header">Для расчета точной стоимости<br>закажите <strong>выезд замерщика</strong></h2>
+<!-- Инициаоизация самой формы через тег form  -->
+            <form class="form" action="">
+<!-- Label - подпись к полю ввода - input  -->
+              <label for="">Ваше имя</label>
+<!-- Поле для ввода -->             
+              <input class="form-input"  type="text">
+              <label for="">Номер телефона</label>
+              <input class="form-input"  type="text">
+              <button class="form-btn button" type="submit">Оставьте заявку</button>
+              <small>Подарок в день обращения*</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Верстка блока с преимуществами --> 
+<section class="features">
+  <div class="container">
+    <!-- Делается на базе слайдера slick: http://kenwheeler.github.io/slick/ --> 
+    <h2 class="section-header">Преимущества работы с нами</h2>
+  <div class="features-slider">
+    <!-- Создаем блок со всеми преимуществами --> 
+
+    <div class="features-blocks">
+    <!-- Преимущество-1 --> 
+      <div class="features-img">
+        <picture>
+          <source srcset="img/coin (1).svg" type="image/">
+          <img src="img/coin (2).png" alt="Преимущество_1">
+        </picture>
+      </div>
+      <h3>Платите по факту</h3>
+      <p>Вы оплачиваете выполнение работы только после их выполнения. <br>Никаких скрытых доплат и промежуточных платежей.</p>
+    </div>
+<!--   Преимущество-2  -->
+    <div class="features-blocks">
+      <div class="features-img">
+        <picture>
+          <source srcset="img/coin (2).svg" type="image/">
+          <img src="img/open-folder-with-document (1).png" alt="Преимущество-2">
+        </picture>
+      </div>
+      <h3>Заключаем договор</h3>
+      <p>Перед началом работ заключаем договор на юридическое лицо. <br>Вы можете быть уверенны, что все обязательства будут выполнены</p>
+    </div>
+<!--   Преимущество-3 -->
+    <div class="features-blocks">
+      <div class="features-img">
+        <picture>
+          <source srcset="img/coin (3).svg" type="image/">
+          <img src="img/clock-circular-outline.png" alt="Преимущество-3">
+        </picture>
+      </div>
+      <h3>Точно в срок</h3>
+      <p>Работаем строго по установленным срокам, которые прописаны в договоре. Если не успеваем, Вы платите меньше.</p>
+    </div>
+<!--   Преимущество-4 -->
+    <div class="features-blocks">
+      <div class="features-img">
+        <picture>
+          <source srcset="img/coin (4).svg" type="image/">
+          <img src="img/piggy-bank (1).png" alt="Преимущество-4">
+        </picture>
+      </div>
+      <h3>Экономьте на материалах</h3>
+      <p>Мы являемся структурным подразделением компании поставщика строительных смесей <a href="gicoma.ru">gicoma.ru</a> и даем Вам самые выгодные цены.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- Верстка блока с ценами --> 
+<section class="price">
+<!-- Создание контейнера для bootstrap --> 
+  <div class="container">
+     <div class="section-header_light">
+<!-- Ряд с наличием цен и кнопкой -->       
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <h2>Цены</h2>
+          <p>Выберите вариант, который подоходи Вам:</p>
+        </div>
+        <div class="col-md-4">
+          <div class="price-button">
+            <button class="button price-header-btn" data-toggle="modal">Рассчитать точную стоимость</button>
+          </div>
+        </div>
+    </div>
+<!-- Карточки с ценами, рисунками и описанием работ --> 
+ <!-- ВАЖНО!!! При создании офсетов нужно делать так, что бы при увеличении расшерения офсета добавлялись те, которые необходимы  данному расшерению. Т.е. если создать md без офсетов, а потом создать sm с офсетами, то вторые будут работать на первых. Т.е. офсеты на xs работают и на sm, md, lg дисплеях --> 
+    <div class="row">
+      <!-- Первая карточка вашим материалом --> 
+      <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+        <div class="price-block">
+          <h4>Штукатурка Вашим материалом</h4>
+          <img src="img/price_1.jpg" alt="Штукатурка Вашим материалом">
+          <span class="price-tag">от <strong>300</strong> руб/м<sup>2</sup></span>
+          <ul class="price-list">
+            <li>Проведение работ</li>
+            <li>Уборка</li>
+           </ul>
+        <button class="button"> Заказать</button>
+        </div>
+    </div>
+      <!-- Вторая карточка под шпаклёвку --> 
+      <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+        <div class="price-block">
+          <h4>Штукатурка под шпаклёвку</h4>
+          <img src="img/price_2.jpg" alt="Штукатурка под шпаклёвку">
+          <span class="price-tag">от <strong>530</strong> руб/м<sup>2</sup></span>
+          <ul class="price-list">
+            <li>Завоз материала</li>
+            <li>Проведение работ</li>
+            <li>Уборка</li>
+            <li>Гарантия 2 года</li>
+          </ul>
+          <button class="button">Заказать</button>
+        </div>
+      </div>
+      <!-- Третья карточка под обои --> 
+      <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+        <div class="price-block">
+          <h4>Штукатурка под обои</h4>
+          <img src="img/price_3.jpg" alt="Штукатурка под обои">
+          <span class="price-tag">от <strong>560</strong> руб/м<sup>2</sup></span>
+          <ul class="price-list">
+            <li>Завоз материала</li>
+            <li>Проведение работ</li>
+            <li>Уборка</li>
+            <li>Гарантия 2 года</li>
+            <li>Можно сразу клеить обои</li>
+          </ul>
+          <button class="button">Заказать</button>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  </div>
+</section>
+
+
+<!-- Блок с отзывами --> 
+<section class="fiedback">
+  <!-- Контейнер bootstrap --> 
+  <div class="container">
+    <div class="section-header">
+      <h2>Отзывы</h2>
+    </div>
+    <!-- Инициализация всего блока слайдера с левой и правой частями --> 
+    <div class="fiedback-slider">
+
+      <div class="fiedback-slider_item">
+        <div class="row">
+          <!-- Левая часть слайдера --> 
+          <div class="col-md-6">
+            <div class="fotorama" data-nav="thumbs">
+              <img src="img/fiedback/Photo_sl_1.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_2.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_3.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_4.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_5.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_6.jpg" alt="">
+            </div>
+          </div>
+          <!-- Правая часть слайдера -->
+          <div class="col-md-6">
+            <p>Объект: г. Киев, проспект Льва Толстого 170</p>
+            <p>Площадь: <strong>357 м<sup>2</sup></strong></p>
+            <p>Выполнен за: <strong>10 дней</strong></p>
+            <p>Стоимость: <strong>550 рублей ща квадратный метр</strong></p>
+            <p>Особенности: <strong>перепады неровности стен достигали 6 м.</strong></p>
+            <!-- Блок с лого заказчика и его данными -->
+            <div class="media">
+              <div class="media-left">
+                <img src="img/client_fiedback_logo.png" alt="Order">
+                <div class="media-body">
+                <span>Заказчик</span>
+                <h4 class="media-heading">Имя заказчика</h4>
+                </div>
+              </div>
+            </div>
+            <!-- Текст отзыва -->
+            <div class="fiedback-text">
+              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Над рекламных коварных, свою рыбного.</p>
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <!-- Второй слайдер -->
+
+      <div class="fiedback-slider_item">
+        <div class="row">
+
+          <div class="col-md-6">            
+            <div class="fotorama" data-nav="thumbs">
+              <img src="img/fiedback/Photo_sl_1.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_2.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_3.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_4.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_5.jpg" alt="">
+              <img src="img/fiedback/Photo_sl_6.jpg" alt="">
+            </div>           
+          </div>
+
+          <div class="col-md-6">
+            <p>Объект: г. Киев, проспект Льва Толстого 170</p>
+            <p>Площадь: <strong>357 м<sup>2</sup></strong></p>
+            <p>Выполнен за: <strong>10 дней</strong></p>
+            <p>Стоимость: <strong>550 рублей ща квадратный метр</strong></p>
+            <p>Особенности: <strong>перепады неровности стен достигали 6 м.</strong></p>
+
+            <div class="media">
+              <div class="media-left">
+                <img src="img/client_fiedback_logo.png" alt="Order">
+                <div class="media-body">
+                <span>Заказчик</span>
+                <h4 class="media-heading">Имя заказчика</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="fiedback-text">
+              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Над рекламных коварных, свою рыбного.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="fiedback-slider_item">
+        <div class="row">
+
+          <div class="col-md-6">
+              <div class="fotorama" data-nav="thumbs">
+                <img src="img/fiedback/Photo_sl_1.jpg" alt="">
+                <img src="img/fiedback/Photo_sl_2.jpg" alt="">
+                <img src="img/fiedback/Photo_sl_3.jpg" alt="">
+                <img src="img/fiedback/Photo_sl_4.jpg" alt="">
+                <img src="img/fiedback/Photo_sl_5.jpg" alt="">
+                <img src="img/fiedback/Photo_sl_6.jpg" alt="">
+              </div>
+          </div>
+
+          <div class="col-md-6">
+            <p>Объект: г. Киев, проспект Льва Толстого 170</p>
+            <p>Площадь: <strong>357 м<sup>2</sup></strong></p>
+            <p>Выполнен за: <strong>10 дней</strong></p>
+            <p>Стоимость: <strong>550 рублей ща квадратный метр</strong></p>
+            <p>Особенности: <strong>перепады неровности стен достигали 6 м.</strong></p>
+
+              <div class="media">
+                <div class="media-left">
+                  <img src="img/client_fiedback_logo.png" alt="Order">
+                  <div class="media-body">
+                  <span>Заказчик</span>
+                  <h4 class="media-heading">Имя заказчика</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fiedback-text">
+                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Над рекламных коварных, свою рыбного.</p>
+              </div>
+
+        </div>
+      </div>      
+    </div>      
+  </div>
+</div>
+  <div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    
+    <div class="fiedback-form">
+      <h3>Хотите так же? Оставьте Ваши контактные данные.</h3>
+      <form class="form" action="#">
+        <div class="row">
+          
+          <div class="col-md-6">
+            <label for="">Ваше имя</label>
+            <input class="form-input"  type="text">
+          </div>
+
+          <div class="col-md-6">
+            <div class="label_form">
+              <label for="">Номер телефона</label>
+            </div>
+            <input class="form-input"  type="text">            
+          </div>
+
+        </div>
+        
+        <button class="form-btn fiedback-btn button" type="submit">Оставьте заявку</button>
+        <small>Перезвоним в ближайшее время</small>
+      </form>
+   </div>
+  </div>
+  </div>
+<img class="hand" src="img/fiedback/hand.png" alt="hand">
+</section>
+
+
+
+<!-- Блок с Схемой работы --> 
+
+
+<section class="scheme">
+  <div class="container">
+    <div class="section-header">
+      <h3>Схема работы</h3>
+      <p>Работа над Вашим объектом будет включать следующие этапы:</p>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-md-3 ">
+        <div class="scheme-block">
+          <img src="img/scheme/scheme_1.png" alt="pict_1">
+          <h3>Заявка</h3>
+          <p>Оставляйте заявку онлайн или<br>звоните: +3 800 000 00 00</p>
+      </div>     
+    </div>
+
+    <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-md-3 col-md-offset-1 ">
+      <div class="scheme-block">
+          <img src="img/scheme/scheme_2.png" alt="pict_2">
+          <h3>Выезд специалиста</h3>
+          <p>В течении 1 рабочего дня к Вам<br>приезжает специалист, который<br>выполнит замеры для точной стоимости работ</p>
+      </div> 
+    </div>
+
+
+
+    <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-md-3 col-md-offset-1 ">
+      <div class="scheme-block">  
+          <img src="img/scheme/scheme_3.png" alt="pict_3">
+          <h3>Составление договора</h3>
+          <p>Готовим договор и согласовываеми<br>с Вами</p>
+      </div>  
+    </div>
+
+
+    <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-md-3 ">
+      <div class="scheme-block">
+          <img src="img/scheme/scheme_4.png" alt="pict_4">
+          <h3>Начало работ</h3>
+          <p>Доставляем материалы,<br>оборудование, подписываем<br>договор и начинаем работы</p>
+      </div>      
+    </div>
+
+
+    <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-md-3 col-md-offset-1 ">
+      <div class="scheme-block">
+          <img src="img/scheme/scheme_5.png" alt="pict_5">
+          <h3>Завершение работ</h3>
+          <p>После окончания работ Вы<br>проверяете качество и<br>подписываете акт сдачи,<br>производите оплату.</p>
+      </div>     
+    </div>
+  </div>
+</div>  
+</section>
+
+<!-- Блок все на 100% включено -->
+
+<section class="all-inclusive">
+    <div class="container">
+      <div class="section-header">
+        <h2>Все на 100% включено</h2>
+        <p>При выполнении работ с нашим материалом в стоимость входит:</p>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  1.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Материал</h4>
+                <p class="media-text">штукатурка, грунтовка или бетоноконтакт, маяки, сетка и стыки</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  2.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Доставка оборудования и материала на объект</h4>
+                <p class="media-text"></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  3.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Подготовка поверхности</h4>
+                <p class="media-text">очистка, грунтовка</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  4.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Установка маяков</h4>
+                <p class="media-text"></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  5.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Оштукатуривание поверхности</h4>
+                <p class="media-text"></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  6.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Удаление маяков</h4>
+                <p class="media-text"></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  7.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Глянцевание</h4>
+                <p class="media-text"></p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="media">
+            <div class="media-left">
+              <span class="circle-border">
+                <span class="circle">
+                  8.
+                </span>
+              </span>
+            </div>
+              <div class="media-body">
+                <h4>Уборка и вывоз мусора</h4>
+                <p class="media-text"></p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- Проблемы -->
+
+<section class="problems">
+  <div class="container">
+    <div class="section-header">
+      <h2>Мы развеиваем все опасения</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="problems-list problems-list_bad">
+          <h4>Какие могут быть проблемы:</h4>
+          <ul>
+            <li>Стены и углы будут неровными</li>
+            <li>Ремонт затянется на долгие месяцы</li>
+            <li>Сложности с доставкой и разгрузкой материалов</li>
+            <li>Останется мусор и пыль после работ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-5 col-md-offset-2">
+        <div class="problems-list problems-list_good">
+          <h4><strong>Наше решение:</strong></h4>
+          <ul>
+            <li>Высокая квалификация специалистов + минимум 5 летний опыт работы = идеально ровные поверхности</li>
+            <li>Соблюдаем сроки, которые прописаны в договоре. На квартиру площадью 150 м<sup>2</sup> уходит от 3 до 5 дней</li>
+            <li>Доставка и подъем материала бесплатно</li>
+            <li>Убираем и вывозим мусор после работ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="problems-girl">
+    <img src="img/girl_problems.png" alt="girl">
+  </div>
+</section>
+
+
+<!-- Начиная с этого блока - верстка самостоятельная -->
+
+<!-- Материалы -->
+
+<section class="materials">
+  <div class="section-header">
+    <h2>Материалы</h2>
+    <p>Мы работаем только качественными, проверенными временем материалами, следующих производителей:</p>
+  </div>
+  <div class="container">      
+      <div class="materials-slider">
+
+        <div class="materials-slider-block">
+          <img src="img/materials/material_1.png" alt="mt_1">
+          <h3><strong>Knauf</strong></h3>
+          <p>МП-75 <strong>275</strong> руб/меш<br><br></p>
+          <a href="#">Сертификат</a>
+        </div>
+
+        <div class="materials-slider-block">
+          <img src="img/materials/material_2.png" alt="mt_2">
+          <h3><strong>Volma</strong></h3>
+          <p>Аква слой <strong>245</strong> руб/меш<br> Гипс актив <strong>245</strong> руб/меш</p>
+          <a href="#">Сертификат</a>
+        </div>
+
+        <div class="materials-slider-block">
+          <img src="img/materials/material_3.png" alt="mt_3">
+          <h3><strong>Forman</strong></h3>
+          <p>Аква слой <strong>245</strong> руб/меш<br> Гипс актив <strong>245</strong> руб/меш</p>
+          <a href="#">Сертификат</a>
+        </div>
+
+        <div class="materials-slider-block">
+          <img src="img/materials/material_4.png" alt="mt_4">
+          <h3><strong>Ceresit</strong></h3>
+          <p>Аква слой <strong>245</strong> руб/меш<br> Гипс актив <strong>245</strong> руб/меш</p>
+          <a href="#">Сертификат</a>
+        </div>
+
+      </div>
+
+      <span class="materials-bottom"> Вы можете приобрести материалы по оптовым ценам на сайте <a href="gicema.ru">gicema.ru</a> или по телефону <a href="tel: +38 000 000 00 00">+38 000 000 00 00</a></span>
+  </div>
+</section>
+
+<section class="we_working">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-5">
+        <h2>посмотрите как мы работаем</h2>
+        <p>Хотите удостовериться в профессионализме наших сотрудников?</p>
+        <p>Вы можете сделать это, понаблюдав за ходом работ. Увидите оборудование.ю материалы и качество исполнения.</p>
+      </div>
+      <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-4 col-md-offset-3">
+        <div class="we_working-form">
+          <h2 class="workout">Оставьте контактные данные для связи</h2>
+            <form class="form" action="">
+              <label for="">Ваше имя</label>
+              <input class="form-input"  type="text">
+              <label for="">Номер телефона</label>
+              <input class="form-input"  type="text">
+              <button class="form-btn button" type="submit">Записаться на просмотр</button>
+              <small>Подберем ближайший к Вам объект</small>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+<!-- Дополнительные услеги -->
+
+<section class="additional">
+  <div class="container">
+    <div class="section-header">
+      <h2>Дополнительные услуги</h2>
+      <p>Помимо штукатурных работ Вы можете заказать у нас следующие услуги:</p>
+    </div>
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="additional-block">
+          <img src="img/additional/additional_1.png" alt="add_1">
+          <p>Монтаж электропроводки</p>
+          <button class="button">Цены</button>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="additional-block">
+          <img src="img/additional/additional_2.png" alt="add_2">
+          <p>Стяжка пола</p>
+          <button class="button">Цены</button>        
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="additional-block">
+          <img src="img/additional/additional_3.png" alt="add_3">
+          <p>Сантехнические работы</p>
+          <button class="button">Цены</button>          
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Контакты -->
+
+
+<section class="kontakts">
+  <div class="container">
+        <h2>Контакты</h2>
+    <div class="row">
+      
+      <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-6">
+      <p>Адрес офиса: <br>Киев, набережное шоссе, 25, офис 52</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.154696026108!2d30.679954715739115!3d50.421812431265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c4c32a270d59%3A0xff5342953fc93db2!2z0YPQuy4g0J_QvtC70LXRgdGB0LrQsNGPLCAyOCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1551187423869" width="620" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <p>Телефон: <br><strong>+38 000 000 00 00</strong>
+        <br><br>E:mail <br><a href="mailto:">example@gmail.com</a>
+        <br><br>Реквизиты: <br> <strong>ФОП 123456 Код 456 456 21</strong></p>
+        
+      </div>
+
+
+      <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-3 col-md-offset-3">
+        <div class="kontakts-form">
+          <h2 class="kontakts_title">Оставьте контактные данные для связи</h2>
+            <form class="form" action="">
+              <label for="">Ваше имя</label>
+              <input class="form-input"  type="text">
+              <label for="">Номер телефона</label>
+              <input class="form-input"  type="text">
+              <label for="">E-mail</label>
+              <input class="form-input"  type="text">
+              <label for="">Сообщение</label>
+              <input class="form-input"  type="text">
+              <button class="form-btn button" type="submit">Записаться на просмотр</button>
+            </form>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+</section>
+
+<section class="footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-xs-offset-0 col-md-3">
+        <img src="img/logo.png" alt="logo">
+      </div>
+
+      <div class="col-xs-12 col-xs-offset-0 col-md-2 col-md-offset-2">
+        <p><strong>+38 000 000 00 00</strong><br><a href="mailto:">example@gmail.com</a><br>Пн-Пт: с 9-00 до 18-00</p>
+      </div>
+      
+      <div class="col-xs-12 col-xs-offset-0 col-md-3 col-md-offset-2">
+        <div class="footer-logodev">
+          <p>Developed by:</p>
+          <img src="img/logo_dev.png" alt="arbuzaicer">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Модальные окна --> 
+
+<div class="popup"> <!-- Создание большого окна, которое будет затемняться при его активации --> 
+
+  <div class="popup-dialog">
+
+    <div class="popup-content">
+      <div class="main-form popup-form"> <!-- Создание формы окна - ее свойства схожи с формой в шапке сайта --> 
+        <button class="popup-close">&times;</button> <!-- &times; - значек в html - умножить/закрыть --> 
+        <h4 class="popup-header">
+          Заинтересовало?
+        </h4>
+        <p>Оставьте свои контактные данные <br>для связи</p>
+          <form class="form" action="#">
+            <label for="">Ваше имя</label>
+<!-- Поле для ввода -->             
+              <input class="form-input"  type="text">
+              <label for="">Номер телефона</label>
+              <input class="form-input"  type="text">
+              <label for="">Сообщение</label>
+              <textarea class="form-input" rows="5"></textarea>
+              <button class="form-btn button" type="submit">Оставьте заявку</button>
+          </form>
+      </div>
+    </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Подключение скриптов --> 
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="slick/slick.min.js"></script> <!-- JS-скрипт slick-слайдера скачиваются с сайта слайдера все скрипты -->
+
+<!-- Подключение js/css скриптов и стилей слайдера - фоторама -->
+  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+  
+  <script type="text/javascript"> 
+
+  $(document).ready(function(){
+
+  /*Описание процесса появления всплывающего окна*/
+
+  $('.popup-btn').on('click', function(event) { /*При нажатии - click - на объект popup-btn*/
+    event.preventDefault();
+    $('.popup').fadeIn();  /*Popup - открывается - fadeIn() можно show()*/
+  });
+  $('.popup-close').on('click', function(event) { /*При нажатии - click - на объект popup-close*/
+    event.preventDefault();
+    $('.popup').fadeOut(); /*Popup - закрывается - fadeOut() можно hide()*/
+  });
+
+  /*Слайдер с отзывами - fiedback*/
+  $('.fiedback-slider').slick(
+    {
+    infinite: true,
+    prevArrow: '<button type="button" class="fiedback-slider-btn fiedback-prev-btn"><img src="img/keyboard-right-arrow-button копия.png" alt="sdasdas" /></button>',
+    nextArrow:'<button type="button" class="fiedback-slider-btn fiedback-next-btn"><img src="img/keyboard-right-arrow-button.png" alt="" /></button>'
+    });
+
+
+  /*Слайдер с преимуществами - features*/
+   $('.features-slider').slick({    /*Выбор класса, который будет использоваться в слайдере*/
+   infinite: false,  /*Включение/отключение бесконечной прокрутки*/
+   slidesToShow: 4,  /*Количество слайдов*/
+   slidesToScroll: 1,
+   responsive: [ /*Поведение слайдера при разныз экранах*/
+      {
+        breakpoint: 1024, /*Экран 1024 пикселя*/
+        settings: {
+        prevArrow:'<button class="prev"></button>', /*Добавление стрелки предыдущего слайда*/
+        nextArrow:'<button class="nextarrow"></button>', /*Добавление стрелки следующего слайда*/
+        slidesToShow: 3, /*Количество слайдов*/
+        slidesToScroll: 1,
+      }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          prevArrow:'<button class="prev"></button>',
+          nextArrow:'<button class="nextarrow"></button>',
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          prevArrow:'<button class="prev"></button>',
+          nextArrow:'<button class="nextarrow"></button>',
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+});
+
+/*Слайдер с материалами */
+ $('.materials-slider').slick({    /*Выбор класса, который будет использоваться в слайдере*/
+ infinite: false,  /*Включение/отключение бесконечной прокрутки*/
+ slidesToShow: 4,  /*Количество слайдов*/
+ slidesToScroll: 1,
+ responsive: [ /*Поведение слайдера при разныз экранах*/
+    {
+      breakpoint: 1024, /*Экран 1024 пикселя*/
+      settings: {
+      prevArrow:'<button class="prev"></button>', /*Добавление стрелки предыдущего слайда*/
+      nextArrow:'<button class="nextarrow"></button>', /*Добавление стрелки следующего слайда*/
+      slidesToShow: 3, /*Количество слайдов*/
+      slidesToScroll: 1,
+    }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        prevArrow:'<button class="prev"></button>',
+        nextArrow:'<button class="nextarrow"></button>',
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        prevArrow:'<button class="prev"></button>',
+        nextArrow:'<button class="nextarrow"></button>',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+  </script>
+
+
+
+</body>
+</html>
